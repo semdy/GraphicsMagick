@@ -25,7 +25,8 @@ imageMagick(“img.png”).resize(300, 100).autoOrient().write(’/path’, call
 
 ####Example (nodejs + Express)
 
-```var gm = require('gm')
+```bash
+var gm = require('gm')
 ,  fs = require('fs')
 ,	imageMagick = gm.subClass({ imageMagick : true });
 exports.imgUpload = function(req, res) {
@@ -54,4 +55,5 @@ exports.imgUpload = function(req, res) {
       });
     });
   }
-};```
+};
+```
