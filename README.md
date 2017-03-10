@@ -1,21 +1,31 @@
 GM : GraphicsMagick for node.js
+
 首先得安装 GraphicsMagick 或者 ImageMagick。
+
 然后执行：
+
 $ sudo npm install gm
 
 我安装的是ImageMagick，在ubuntu系统下快速安装：
+
 $ sudo apt-get install imagemagick
 
 HOW TO USE
+
 GM 文档：http://aheckmann.github.io/gm/docs.html
+
 使用ImageMagick
+
 var imageMagick = gm.subClass({ imageMagick: true });
+
 然后就像文档中使用gm那样使用ImageMagick即可（举个例子）
+
 imageMagick(“img.png”).resize(300, 100).autoOrient().write(’/path’, callback);
 
-Example (nodejs + Express)
 
-`var gm = require('gm')
+####Example (nodejs + Express)
+
+```var gm = require('gm')
 ,  fs = require('fs')
 ,	imageMagick = gm.subClass({ imageMagick : true });
 exports.imgUpload = function(req, res) {
@@ -44,4 +54,4 @@ exports.imgUpload = function(req, res) {
       });
     });
   }
-};`
+};```
